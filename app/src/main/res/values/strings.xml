@@ -1,5 +1,19 @@
 <resources>
     <string name="app_name">Handleliste</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="item_array">
+        <item>Hello</item>
+        <item>How</item>
+        <item>Are</item>
+        <item>You</item>
+        <item>Daisy</item>
+        <item>Rose</item>
+        <item>Daffodil</item>
+        <item>Lavender</item>
+        <item>Peony</item>
+        <item>Lilac</item>
+        <item>Dahlia</item>
+        <item>Tulip</item>
+        <item>Dandelion</item>
+    </string-array>
 </resources>
