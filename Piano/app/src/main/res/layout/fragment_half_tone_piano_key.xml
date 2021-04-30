@@ -7,10 +7,11 @@
     tools:context=".HalfTonePianoKeyFragment">
 
     <Button
-        android:id="@+id/fullToneKey"
-        android:layout_width="60dp"
-        android:layout_height="250dp"
-        android:backgroundTint="@color/white"
+        android:id="@+id/halfToneKey"
+        android:layout_width="40dp"
+        android:layout_height="230dp"
+        android:layout_marginStart="40dp"
+        android:backgroundTint="@color/black"
         android:background="@drawable/pianokeyshape"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintTop_toBottomOf="parent"
