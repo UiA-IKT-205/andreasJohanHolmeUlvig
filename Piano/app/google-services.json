@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "395173199139",
+    "project_id": "piano-d920a",
+    "storage_bucket": "piano-d920a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:395173199139:android:7421654e6fca26241e6096",
+        "android_client_info": {
+          "package_name": "com.example.superpiano"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "395173199139-5glk01b22k4kauksj4q2r4qabumpr659.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATk5BGVmmNmP69IzLNeztC-3gJY6R9fMk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "395173199139-5glk01b22k4kauksj4q2r4qabumpr659.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
