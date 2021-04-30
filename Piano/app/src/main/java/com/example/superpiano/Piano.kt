@@ -1,5 +1,6 @@
 package com.example.superpiano
 
+import android.net.Uri
 import android.os.Bundle
 import android.os.SystemClock.uptimeMillis
 import androidx.fragment.app.Fragment
@@ -7,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.net.toUri
 import com.example.superpiano.data.Note
 import com.example.superpiano.databinding.FragmentPianoBinding
 import kotlinx.android.synthetic.main.fragment_piano.*
@@ -15,6 +17,8 @@ import java.io.File
 import java.io.FileOutputStream
 
 class Piano : Fragment() {
+
+    var onSave:((file: Uri) -> Unit)? = null
 
     private var _binding:FragmentPianoBinding? = null
     private val binding get() = _binding!!
@@ -102,6 +106,21 @@ class Piano : Fragment() {
         }
 
         return view
+    }
+
+    private fun saveFile(fileName:String, path:File?){
+        val extendedFileName = "$fileName.musikk"
+        val file = File(path, extendedFileName)
+
+        FileOutputStream(file, true).bufferedWriter().use { writer ->
+            // bufferedWriter lever her, men stenger ned utenfor
+            score.forEach {
+                writer.write("${it.toString()}\n")
+            }
+        }
+
+        this.onSave?.invoke(file.toUri())
+
     }
 
     fun doesFileExist(filename: String, path: File?): Boolean {
